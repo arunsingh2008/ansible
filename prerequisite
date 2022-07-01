@@ -11,3 +11,38 @@ service sshd restart
 
 ########### commands###############
 ansible ping command   >>>>>>>>>>  ansible all -i inventory -m ping
+ansible ping command to ping individual >>>>>>>>>>>>>> ansible dbservers:\&production -m ping
+
+
+The following table contains a few different examples of common patterns you can use when running commands and playbooks with Ansible:
+
+Pattern	          Result Target
+all	              All Hosts from your inventory file
+host1	            A single host (host1)
+host1:host2	      Both host1 and host2
+group1	          A single group (group1)
+group1:group2	    All servers in group1 and group2
+group1:\&group2	  Only servers that are both in group1 and group2
+group1:\!group2	  Servers in group1 except those also in group2
+
+Link to be followed
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ansible-inventories
+
+
+
+arunbalyan2082@instance-1:/etc/ansible/hosts$ ansible all -i inventory -a "uptime"
+[DEPRECATION WARNING]: Ansible will require Python 3.8 or newer on the controller starting with Ansible 2.12. Current version: 3.6.9 (default, Mar 15 2022, 13:55:28) [GCC 8.4.0]. This feature will be removed 
+from ansible-core in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+104.154.248.19 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: arunbalyan2082@104.154.248.19: Permission denied (publickey,password).",
+    "unreachable": true
+}
+34.66.191.9 | CHANGED | rc=0 >>
+ 09:56:05 up  1:14,  1 user,  load average: 0.03, 0.03, 0.00
+34.66.253.164 | CHANGED | rc=0 >>
+ 09:56:05 up  1:14,  2 users,  load average: 0.00, 0.00, 0.00
+ 
+ 
+ 
+ 
