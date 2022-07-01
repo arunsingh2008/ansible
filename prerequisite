@@ -1,0 +1,9 @@
+# pre-requisite
+
+creating pub key
+ssh-keygen
+ssh-copy-id rusername@host_ip
+#### passwordless login
+/etc/ssh/sshd_config
+PasswordAuthentication yes
+service sshd restart 
