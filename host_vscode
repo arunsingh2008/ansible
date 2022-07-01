@@ -1,0 +1,10 @@
+Host 13.124.239.108
+
+    HostName 13.124.239.108
+
+    User jagannath
+
+    LocalForward 8084 172.31.7.241:31003
+
+    Forwardx11 yes
+    
