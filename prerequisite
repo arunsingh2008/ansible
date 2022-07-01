@@ -7,3 +7,7 @@ ssh-copy-id rusername@host_ip
 /etc/ssh/sshd_config
 PasswordAuthentication yes
 service sshd restart 
+
+
+########### commands###############
+ansible ping command   >>>>>>>>>>  ansible all -i inventory -m ping
