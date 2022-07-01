@@ -1,0 +1,37 @@
+104.154.248.19
+34.66.191.9
+34.66.253.164
+
+
+
+
+
+the above are hosts ip including master machine
+ansible ping command
+ansible all -i inventory -m ping
+output will be as below#########################
+
+34.66.191.9 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+34.66.253.164 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+
+
+############# for same machine ping response###################
+from ansible-core in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+104.154.248.19 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: arunbalyan2082@104.154.248.19: Permission denied (publickey,password).",
+    "unreachable": true
+}
